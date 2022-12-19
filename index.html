@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>手写板，签名板</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .handwriting-board {
+      border: solid 1px #00000020;
+      display: block;
+      margin: 50px auto;
+    }
+
+    .toolbar {
+      padding: 20px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .toolbar button {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="editor"></div>
+  <div class="toolbar">
+    <button class="undo">撤销</button>
+    <button class="redo">重做</button>
+    <button class="reset">重置</button>
+    <button class="download">下载</button>
+  </div>
+
+  <script type="module">
+    import { HandwritingBoard } from './src/main.ts'
+
+    const handwritingBoard = new HandwritingBoard({
+      el: '#editor',
+      canvasClass: 'handwriting-board'
+    });
+
+    document.querySelector('.undo').addEventListener('click', () => {
+      handwritingBoard.undo()
+    })
+    document.querySelector('.redo').addEventListener('click', () => {
+      handwritingBoard.redo()
+    })
+    document.querySelector('.reset').addEventListener('click', () => {
+      handwritingBoard.reset()
+    })
+    document.querySelector('.download').addEventListener('click', () => {
+      handwritingBoard.download('签名');
+    })
+  </script>
+</body>
+
+</html>

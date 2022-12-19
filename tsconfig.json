@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "lib": ["es6", "DOM", "es2017"],
+    "module": "ESNext",
+    "allowJs": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*"]
+}

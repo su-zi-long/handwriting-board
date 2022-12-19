@@ -1,0 +1,15 @@
+{
+  "name": "handwriting-board",
+  "version": "1.0.0",
+  "description": "手写板",
+  "main": "src/main.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "less": "^4.1.3",
+    "vite": "^2.4.2"
+  }
+}
