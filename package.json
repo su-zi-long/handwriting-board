@@ -1,15 +1,22 @@
 {
-  "name": "handwriting-board",
-  "version": "1.0.0",
-  "description": "手写板",
-  "main": "src/main.ts",
+  "name": "web-handwriting-board",
+  "version": "1.0.2",
+  "description": "一个简单易用的web手写板，适合在有手写签名需求的场景使用",
+  "repository": "https://github.com/su-zi-long/handwriting-board",
+  "main": "dist/handwriting-board.umd.js",
+  "keywords": [
+    "签字板",
+    "手写板",
+    "画板"
+  ],
+  "author": {
+    "name": "苏子龙"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build"
   },
   "devDependencies": {
-    "eslint": "^8.28.0",
-    "less": "^4.1.3",
     "vite": "^2.4.2"
   }
 }

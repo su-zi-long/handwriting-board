@@ -93,6 +93,9 @@ class HandwritingBoard {
       canvas.addEventListener("mousedown", mousedownHandle, false);
       canvas.addEventListener("mousemove", mousemoveHandle, false);
       canvas.addEventListener("mouseup", mouseupHandle, false);
+      canvas.addEventListener("mouseleave", () => {
+        this.isMousedown = false;
+      }, false);
     }
   }
   _renderLine(startPoint, endPoint) {
